@@ -10,7 +10,7 @@ export type PlaceProps = {
     description: string;
     coupons: number;
     cover: string;
-    andress: string;
+    address: string
 }
 
 type Props = TouchableOpacityProps & {
@@ -19,11 +19,14 @@ type Props = TouchableOpacityProps & {
 
 export function Place({ data, ...rest }: Props) {
     return (
-        <TouchableOpacity style={s.container}>
+        <TouchableOpacity style={s.container} {...rest}>
             <Image style={s.image} source={{ uri: data.cover }} />
+
             <View style={s.content}>
                 <Text style={s.name}> {data.name} </Text>
-                <Text style={s.description} numberOfLines={2}> {data.description} </Text>
+                <Text style={s.description} numberOfLines={2}>
+                    {data.description}
+                </Text>
 
                 <View style={s.footer}>
                     <IconTicket size={16} color={colors.red.base} />

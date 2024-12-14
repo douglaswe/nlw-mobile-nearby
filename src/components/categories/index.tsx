@@ -1,4 +1,5 @@
 import { FlatList } from "react-native";
+
 import { Category } from "../category";
 import { s } from "./styles";
 

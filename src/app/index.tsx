@@ -1,8 +1,9 @@
+import { View } from "react-native"
+import { router } from "expo-router"
+
 import { Button } from "@/components/button"
 import { Steps } from "@/components/steps"
 import { Wellcome } from "@/components/welcome"
-import { View } from "react-native"
-import { router } from "expo-router"
 
 export default function Index() {
     return (

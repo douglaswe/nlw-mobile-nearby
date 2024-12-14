@@ -13,7 +13,8 @@ export function Category({ name, isSelected = false, iconId, ...rest }: Props ) 
     const Icon = categoriesIcons[iconId]
 
     return(
-        <Pressable style={[s.container, isSelected && s.containerSelect]}
+        <Pressable 
+        style={[s.container, isSelected && s.containerSelect]}
         {...rest}
         >
             <Icon size={16} color={colors.gray[isSelected ? 100 : 400]}/>
